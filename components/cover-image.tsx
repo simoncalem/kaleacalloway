@@ -7,12 +7,13 @@ import { urlForImage } from '../lib/sanity'
 interface CoverImageProps {
   title: string
   slug?: string
+  alt?: string
   image: any
   priority?: boolean
 }
 
 export default function CoverImage(props: CoverImageProps) {
-  const { title, slug, image: source, priority } = props
+  const { title, slug, image: source, priority, alt } = props
   const image = source?.asset?._ref ? (
     <div
       className={cn('shadow-small', {
