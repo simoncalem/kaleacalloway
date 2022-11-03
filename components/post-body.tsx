@@ -15,7 +15,9 @@ import portableTextStyles from './portable-text-styles.module.css'
 
 const PortableTextComponents = {
   types: {
-    image: ({ value }) => <Image image={value} alt={value.alt} />,
+    image: ({ value }) => (
+      <Image image={value} alt={value.alt} title={value.alt} />
+    ),
   },
 }
 

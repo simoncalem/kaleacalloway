@@ -23,9 +23,9 @@ export default function Image(props: ImageProps) {
       <Img
         className="h-auto w-full"
         width={2000}
-        height={1000}
+        height={1500}
         alt={alt}
-        src={urlForImage(source).height(1000).width(2000).url()}
+        src={urlForImage(source).height(1500).width(2000).url()}
         sizes="100vw"
         priority={priority}
       />
