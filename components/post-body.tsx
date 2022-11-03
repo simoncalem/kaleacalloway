@@ -10,12 +10,12 @@
 import { PortableText } from '@portabletext/react'
 import { ContextConsumer } from 'react-is'
 
-import CoverImage from './cover-image'
+import Image from './image'
 import portableTextStyles from './portable-text-styles.module.css'
 
 const PortableTextComponents = {
   types: {
-    image: ({ value }) => <CoverImage image={value} />,
+    image: ({ value }) => <Image image={value} alt={value.alt} />,
   },
 }
 
