@@ -29,6 +29,7 @@ export default function Image(props: ImageProps) {
         sizes="100vw"
         priority={priority}
       />
+      <p>{alt}</p>
     </div>
   ) : (
     <div style={{ paddingTop: '50%', backgroundColor: '#ddd' }} />

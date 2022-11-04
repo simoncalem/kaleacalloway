@@ -1,3 +1,4 @@
+import Vimeo from '@u-wave/react-vimeo'
 import Head from 'next/head'
 
 import BlogHeader from '../components/blog-header'
@@ -42,7 +43,15 @@ export default function Index({
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
-        <IntroTemplate />
+        {/* <IntroTemplate /> */}
+
+        <Vimeo
+          video="https://vimeo.com/735829448/25c2279ee1"
+          autoplay
+          background
+          loop
+          responsive
+        />
       </Layout>
     </>
   )
