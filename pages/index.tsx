@@ -1,5 +1,6 @@
 import Vimeo from '@u-wave/react-vimeo'
 import Head from 'next/head'
+import React, { useState } from 'react'
 
 import BlogHeader from '../components/blog-header'
 import Container from '../components/container'
@@ -22,7 +23,12 @@ export default function Index({
   })
   const [heroPost, ...morePosts] = allPosts || []
   const { title = 'Blog.' } = blogSettings || {}
+  const [bgColour, setBgColour] = useState('#fafafa')
 
+  const appStyles = {
+    height: '100vh',
+    background: `${bgColour}`,
+  }
   return (
     <>
       <Layout preview={preview}>
@@ -44,7 +50,17 @@ export default function Index({
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
         {/* <IntroTemplate /> */}
-
+        <div className="App" style={appStyles}>
+          <button
+            className="primary"
+            // style={styles}
+            onMouseEnter={() => setBgColour('#c83f49')}
+            onMouseLeave={() => setBgColour('#fafafa')}
+          >
+            {' '}
+            Red
+          </button>
+        </div>
         <Vimeo
           video="https://vimeo.com/735829448/25c2279ee1"
           autoplay
