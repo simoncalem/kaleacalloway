@@ -11,7 +11,12 @@ export default function VimeoVideo({ videoSrc, shadowColor }) {
   return (
     <div>
       <div className="center grid grid-cols-1 justify-items-center">
-        <div className="relative">
+        <div className="relative group">
+          <div>
+            <p className="absolute z-[100] pl-1 text-white font-mono group-hover:opacity-100 opacity-0">
+              PLAYING
+            </p>
+          </div>
           <div
             onMouseEnter={() => toggle()}
             onMouseLeave={() => toggle()}
@@ -28,6 +33,7 @@ export default function VimeoVideo({ videoSrc, shadowColor }) {
               boxShadow: `0 0 3px 2px ${shadowColor}`,
               position: 'relative',
             }}
+            key={videoSrc}
           />
         </div>
       </div>

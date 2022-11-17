@@ -92,8 +92,8 @@ export default function Home() {
             ref={ref}
             key={'1'}
             poster="https://img2.storyblok.com/0x400/f/88039/1920x1080/1c60450933/nyt_ttaj_76_ynyt0273000h_youtube-00_00_49_04-still004.jpg"
-            onMouseOver={(e) => e.target.play()}
-            onMouseOut={(e) => e.target.pause()}
+            onMouseOver={(e) => (e.target as HTMLVideoElement).play()}
+            onMouseOut={(e) => (e.target as HTMLVideoElement).pause()}
           >
             <source
               src="https://player.vimeo.com/external/611756883.sd.mp4?s=fc00181b131b4bf289e880dddc703b882f1a2f16&amp;profile_id=165"
