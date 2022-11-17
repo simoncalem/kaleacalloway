@@ -9,13 +9,17 @@ export default function Home() {
     <div>
       <p>Your score is {score}</p>
       <button onClick={increaseScore}>+</button>
-      <Vimeo
-        video="https://vimeo.com/735829448/25c2279ee1"
-        autoplay
-        background
-        loop
-        responsive
-      />
+      <div className="w-[600px] mx-auto overflow-hidden hover:scale-105 transition-transform cursor-pointer hover:cursor-pointer hover:rounded-md">
+        <div className="scale-105 hover:scale-100 transition-transform">
+          <Vimeo
+            video="https://vimeo.com/735829448/25c2279ee1"
+            autoplay
+            background
+            loop
+            responsive
+          />
+        </div>
+      </div>
     </div>
   )
 }

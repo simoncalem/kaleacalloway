@@ -14,7 +14,7 @@ export default function VimeoVideo({ videoSrc, shadowColor }) {
         <div className="relative">
           <div
             onMouseEnter={() => toggle()}
-            onMouseLeave={toggle}
+            onMouseLeave={() => toggle()}
             className="absolute z-50 h-full w-full cursor-pointer saturate-50 backdrop-filter hover:saturate-100"
           ></div>
           <Vimeo
