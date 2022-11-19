@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@mux/mux-player-react': ^1.3.0
   '@portabletext/react': ^1.0.6
   '@sanity/image-url': ^1.0.1
   '@sanity/vision': 3.0.0-dev-preview.22
@@ -31,6 +32,7 @@ specifiers:
   typescript: ^4.9.3
 
 dependencies:
+  '@mux/mux-player-react': 1.3.0_2zx2umvpluuhvlq44va5bta2da
   '@portabletext/react': 1.0.6_react@18.2.0
   '@sanity/image-url': 1.0.1
   '@sanity/vision': 3.0.0-dev-preview.22_7plxhpatmbvx47m3w6o2iclpme
@@ -542,6 +544,10 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@github/template-parts/0.5.3:
+    resolution: {integrity: sha512-Jw7gNq1zIwd17gTmtD/h+kTpSsue/fRGiqso42+A36AYMVlkXxmQ3UB+lInE8+4KPSxaOIvMMLD90LQjFlLz5A==}
+    dev: false
+
   /@humanwhocodes/config-array/0.11.7:
     resolution: {integrity: sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw==}
     engines: {node: '>=10.10.0'}
@@ -683,6 +689,49 @@ packages:
       '@motionone/types': 10.14.0
       hey-listen: 1.0.8
       tslib: 2.4.1
+    dev: false
+
+  /@mux/mux-player-react/1.3.0_2zx2umvpluuhvlq44va5bta2da:
+    resolution: {integrity: sha512-X6/Xp8N0Dghvn0MIL1+fq0ovElYkDcVS3U7LZQIHR5O36wSuzoepR0CZfWoXiCxSl1/A8pjQP+lWPevfEN2fPA==}
+    peerDependencies:
+      '@types/react': ^17.0.0 || ^18
+      '@types/react-dom': '*'
+      react: ^17.0.2 || ^18
+      react-dom: ^17.0.2 || ^18
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+    dependencies:
+      '@mux/mux-player': 1.3.0
+      '@mux/playback-core': 0.13.0
+      '@types/react': 18.0.25
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@mux/mux-player/1.3.0:
+    resolution: {integrity: sha512-3iEIYl8eq3ORU5rObLJWQeIpi862hh5VWw8hNLAWLZZz4nFPzb0XU8Rw37L4gnXUH7npD6mNvmwcuOSCMkMqNw==}
+    dependencies:
+      '@github/template-parts': 0.5.3
+      '@mux/mux-video': 0.10.0
+      '@mux/playback-core': 0.13.0
+      media-chrome: 0.15.1
+    dev: false
+
+  /@mux/mux-video/0.10.0:
+    resolution: {integrity: sha512-+SnnEUGohAVCrtBxMhYxZ5w7a1tD+0uxvgcFPAr1wRy7DUvDtcYbtBGzgU7lfLgULfHsv2YPX2j1krigkWnSMQ==}
+    dependencies:
+      '@mux/playback-core': 0.13.0
+    dev: false
+
+  /@mux/playback-core/0.13.0:
+    resolution: {integrity: sha512-OTcqFRRdNvvdPhUGOwO8Jg4mhiK8QXmirKno6R1mif5mrlsXrs+4z12gyWEUAVyCmMW/FDqyObgwFUyJBxj4yQ==}
+    dependencies:
+      hls.js: 1.2.3
+      mux-embed: 4.15.0
     dev: false
 
   /@next/env/13.0.3:
@@ -3770,6 +3819,10 @@ packages:
       value-equal: 1.0.1
     dev: false
 
+  /hls.js/1.2.3:
+    resolution: {integrity: sha512-CC/vHi82ldiiydIhliNI3whlcepRXxI2jdpd/KKb6lyEv+74e7lXs4cGk5PHfTLxZMKOj6+m5LX9VAbvV/r7AQ==}
+    dev: false
+
   /hoist-non-react-statics/3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
     dependencies:
@@ -4334,6 +4387,10 @@ packages:
     resolution: {integrity: sha512-QBJSFpsedXUl/Lgs4ySdB2XCzUEcJ3ujpbagdZCkRaYIaC0kFnID8jhc84KEiVv6dNFtIrmW7bqow0lDxgJi6A==}
     dev: false
 
+  /media-chrome/0.15.1:
+    resolution: {integrity: sha512-rII6hg1I5FDGpcTCm8zKUBInJQ1M9S95K0ihWjLPkOzSj0gvqRljl5KI27V3Anzl05gSXEK1KN9aLIXSWW2Row==}
+    dev: false
+
   /memoize-resolver/1.0.0:
     resolution: {integrity: sha512-mXfNXte0RSWl0rEIsQhXutfM2R2Oa7UyKDD7XoZMEbKeucTRms04y5y41U8gLqPzRx7ViN/QyYnTR2TX/5tawA==}
     dev: false
@@ -4442,6 +4499,10 @@ packages:
 
   /ms/2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
+
+  /mux-embed/4.15.0:
+    resolution: {integrity: sha512-eYlZmSkfc2xf+k2aWaPHLeh81wtPQsWxRMob0YoUyBCEX1iuJhPKpJE+9C8ASY+LrE+Z44K306rbg8a5oPCrjg==}
+    dev: false
 
   /nano-pubsub/1.0.2:
     resolution: {integrity: sha512-HtPs1RbULM/z8wt3BbeeZlxVNiJbl+zQAwwrbc0KAq5NHaCG3MmffOVCpRhNTs+TK67MdN6aZ+5wzPtRZvME+w==}
