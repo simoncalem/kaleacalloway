@@ -86,7 +86,7 @@ export default function Home() {
 
         <VimeoVideo
           videoSrc="https://vimeo.com/771706414"
-          shadowColor={'blue'}
+          shadowColor={'yellow'}
         />
         <MuxPlayer
           playbackId={'sd8crKCGFKpUYN428yhNRRbGxUHntm1ztVMyiOuIsRA'}
@@ -99,7 +99,7 @@ export default function Home() {
             ref={ref}
             key={'1'}
             loop
-            poster="https://img2.storyblok.com/0x400/f/88039/1920x1080/1c60450933/nyt_ttaj_76_ynyt0273000h_youtube-00_00_49_04-still004.jpg"
+            // poster="https://img2.storyblok.com/0x400/f/88039/1920x1080/1c60450933/nyt_ttaj_76_ynyt0273000h_youtube-00_00_49_04-still004.jpg"
             onMouseOver={(e) => {
               ;(e.target as HTMLVideoElement).play()
               console.log('play')
