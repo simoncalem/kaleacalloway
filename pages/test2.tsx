@@ -1,8 +1,9 @@
+import { useEffect, useRef, useState } from 'react'
 import MuxPlayer from '@mux/mux-player-react'
 import Vimeo from '@u-wave/react-vimeo'
-import { useEffect, useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
 
-import VimeoVideo from '../components/vimeo-video'
+const VimeoVideo = dynamic(() => import('../components/vimeo-video'))
 
 const Message = ({ active }) => {
   return <h1>The video is {active ? 'disabled' : 'active'}</h1>
@@ -88,17 +89,17 @@ export default function Home() {
           videoSrc="https://vimeo.com/771706414"
           shadowColor={'yellow'}
         />
-        <MuxPlayer
+        {/* <MuxPlayer
           playbackId={'sd8crKCGFKpUYN428yhNRRbGxUHntm1ztVMyiOuIsRA'}
           autoPlay={'muted'}
-          controls
           loop
-        />
+        /> */}
         <div>
           <video
             ref={ref}
             key={'1'}
             loop
+            preload={'auto'}
             // poster="https://img2.storyblok.com/0x400/f/88039/1920x1080/1c60450933/nyt_ttaj_76_ynyt0273000h_youtube-00_00_49_04-still004.jpg"
             onMouseOver={(e) => {
               ;(e.target as HTMLVideoElement).play()
