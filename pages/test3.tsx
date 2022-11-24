@@ -30,40 +30,56 @@ export default function Home(muxRef) {
     setActive((active) => !active)
     console.log(active)
   }
-  
+
   const ref = useRef(null)
   useEffect(() => {
     // 👇️ use a ref (best)
     muxRef = ref.current
-   
   }, [])
   return (
     <div>
       <div className="center grid grid-cols-1 justify-items-center">
-        
+        <div
+          className="border-2 w-6/12 border-blue-500"
+          onMouseOver={() => {
+            muxRef.play()
+          }}
+          onMouseOut={() => {
+            muxRef.pause()
+          }}
+        >
+          <MuxPlayer
+            playbackId={'jz015SdPKu1sNbYEVnWK7YUNVtEUVZ9iHsqKpI2oTmQk'}
+            loop
+            muted
+            ref={ref}
+          />
+        </div>
+        <button
+          onClick={() => {
+            muxRef.play()
+          }}
+        >
+          PLAY VIDEO
+        </button>
+        <button
+          onClick={() => {
+            muxRef.pause()
+          }}
+        >
+          PAUSE VIDEO
+        </button>
 
-        <div onMouseOver={()=>{muxRef.play()}}
-       onMouseOut={()=>{muxRef.pause()}}>
-        <MuxPlayer
-          playbackId={'Ojz11wN2KWh7mz2Mgc2nvatL9KwYHP3M'}
-          loop
-          muted
-          ref={ref}
-    
-       /></div>
-       <button onClick={()=>{muxRef.play()}}>PLAY VIDEO</button>
-       <button onClick={()=>{muxRef.pause()}}>PAUSE VIDEO</button>
-              
-              
-              
-              <div className='w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer'
-        onMouseOver={()=>{muxRef.play()}}
-       onMouseOut={()=>{muxRef.pause()}}
-       ></div>
-        
+        <div
+          className="w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer"
+          onMouseOver={() => {
+            muxRef.play()
+          }}
+          onMouseOut={() => {
+            muxRef.pause()
+          }}
+        ></div>
       </div>
-     
     </div>
-    
   )
 }
