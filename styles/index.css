@@ -3,3 +3,13 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+mux-player {
+    --controls: none;
+    --media-object-fit: cover;
+  
+  }
+  
+  mux-player::part(gesture-layer) {
+    display: none;
+  }

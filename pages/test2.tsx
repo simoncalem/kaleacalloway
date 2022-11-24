@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
 import MuxPlayer from '@mux/mux-player-react'
 import Vimeo from '@u-wave/react-vimeo'
 import dynamic from 'next/dynamic'
+import { useEffect, useRef, useState } from 'react'
 
 const VimeoVideo = dynamic(() => import('../components/vimeo-video'))
 
@@ -21,19 +21,21 @@ const Switch = ({ active, onToggle }) => {
     </div>
   )
 }
+let muxRef
 
-export default function Home() {
+export default function Home(muxRef) {
   const [active, setActive] = useState(true)
 
   const toggle = () => {
     setActive((active) => !active)
     console.log(active)
   }
+  
   const ref = useRef(null)
   useEffect(() => {
     // 👇️ use a ref (best)
-    const el2 = ref.current
-    console.log(el2)
+    muxRef = ref.current
+   
   }, [])
   return (
     <div>
@@ -89,14 +91,25 @@ export default function Home() {
           videoSrc="https://vimeo.com/771706414"
           shadowColor={'yellow'}
         />
-        {/* <MuxPlayer
-          playbackId={'sd8crKCGFKpUYN428yhNRRbGxUHntm1ztVMyiOuIsRA'}
-          autoPlay={'muted'}
+        <div onMouseOver={()=>{muxRef.play()}}
+       onMouseOut={()=>{muxRef.pause()}}>
+        <MuxPlayer
+          playbackId={'Ojz11wN2KWh7mz2Mgc2nvatL9KwYHP3M'}
+          // autoPlay={'muted'}
           loop
-        /> */}
+          muted
+          ref={ref}
+    
+       /></div>
+       <button onClick={()=>{muxRef.play()}}>PLAY VIDEO</button>
+       <button onClick={()=>{muxRef.pause()}}>PAUSE VIDEO</button>
+       <div className='w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer'
+       onMouseOver={()=>{muxRef.play()}}
+       onMouseOut={()=>{muxRef.pause()}}
+       ></div>
         <div>
           <video
-            ref={ref}
+        
             key={'1'}
             loop
             preload={'auto'}
@@ -117,6 +130,8 @@ export default function Home() {
           </video>
         </div>
       </div>
+     
     </div>
+    
   )
 }
