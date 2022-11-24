@@ -37,49 +37,47 @@ export default function Home(muxRef) {
     muxRef = ref.current
   }, [])
   return (
-    <div>
-      <div className="center grid grid-cols-1 justify-items-center">
-        <div
-          className="border-2 w-6/12 border-blue-500"
-          onMouseOver={() => {
-            muxRef.play()
-          }}
-          onMouseOut={() => {
-            muxRef.pause()
-          }}
-        >
-          <MuxPlayer
-            playbackId={'jz015SdPKu1sNbYEVnWK7YUNVtEUVZ9iHsqKpI2oTmQk'}
-            loop
-            muted
-            ref={ref}
-          />
-        </div>
-        <button
-          onClick={() => {
-            muxRef.play()
-          }}
-        >
-          PLAY VIDEO
-        </button>
-        <button
-          onClick={() => {
-            muxRef.pause()
-          }}
-        >
-          PAUSE VIDEO
-        </button>
-
-        <div
-          className="w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer"
-          onMouseOver={() => {
-            muxRef.play()
-          }}
-          onMouseOut={() => {
-            muxRef.pause()
-          }}
-        ></div>
+    <div className="center grid grid-cols-1 justify-items-center">
+      <div
+        className="border-2 border-blue-500 block"
+        onMouseOver={() => {
+          muxRef.play()
+        }}
+        onMouseOut={() => {
+          muxRef.pause()
+        }}
+      >
+        <MuxPlayer
+          playbackId={'jz015SdPKu1sNbYEVnWK7YUNVtEUVZ9iHsqKpI2oTmQk'}
+          loop
+          muted
+          ref={ref}
+        />
       </div>
+      <button
+        onClick={() => {
+          muxRef.play()
+        }}
+      >
+        PLAY VIDEO
+      </button>
+      <button
+        onClick={() => {
+          muxRef.pause()
+        }}
+      >
+        PAUSE VIDEO
+      </button>
+
+      <div
+        className="w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer"
+        onMouseOver={() => {
+          muxRef.play()
+        }}
+        onMouseOut={() => {
+          muxRef.pause()
+        }}
+      ></div>
     </div>
   )
 }
