@@ -30,42 +30,60 @@ export default function Home(muxRef) {
     setActive((active) => !active)
     console.log(active)
   }
-  
+
   const ref = useRef(null)
   muxRef = ref.current
   useEffect(() => {
+<<<<<<< HEAD
     // 👇️ use a ref (best)
   
+=======
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+>>>>>>> 45538df318ce4b49faf019bb945fc6d4cc460a14
     muxRef = ref.current
-   
   }, [])
   return (
-    <div>
-      <div className="center grid grid-cols-1 justify-items-center">
-        
-
-        <div onMouseOver={()=>{muxRef.play()}}
-       onMouseOut={()=>{muxRef.pause()}}>
+    <div className="center grid grid-cols-1 justify-items-center">
+      <div
+        className="border-2 border-blue-500 block"
+        onMouseOver={() => {
+          muxRef.play()
+        }}
+        onMouseOut={() => {
+          muxRef.pause()
+        }}
+      >
         <MuxPlayer
-          playbackId={'Ojz11wN2KWh7mz2Mgc2nvatL9KwYHP3M'}
+          playbackId={'jz015SdPKu1sNbYEVnWK7YUNVtEUVZ9iHsqKpI2oTmQk'}
           loop
           muted
           ref={ref}
-    
-       /></div>
-       <button onClick={()=>{muxRef.play()}}>PLAY VIDEO</button>
-       <button onClick={()=>{muxRef.pause()}}>PAUSE VIDEO</button>
-              
-              
-              
-              <div className='w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer'
-        onMouseOver={()=>{muxRef.play()}}
-       onMouseOut={()=>{muxRef.pause()}}
-       ></div>
-        
+        />
       </div>
-     
+      <button
+        onClick={() => {
+          muxRef.play()
+        }}
+      >
+        PLAY VIDEO
+      </button>
+      <button
+        onClick={() => {
+          muxRef.pause()
+        }}
+      >
+        PAUSE VIDEO
+      </button>
+
+      <div
+        className="w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer"
+        onMouseOver={() => {
+          muxRef.play()
+        }}
+        onMouseOut={() => {
+          muxRef.pause()
+        }}
+      ></div>
     </div>
-    
   )
 }

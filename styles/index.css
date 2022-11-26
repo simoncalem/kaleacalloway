@@ -5,11 +5,14 @@
 @tailwind utilities;
 
 mux-player {
-    --controls: none;
-    --media-object-fit: cover;
-  
-  }
-  
-  mux-player::part(gesture-layer) {
-    display: none;
-  }
+  --controls: none;
+  display: block;
+  @apply border-2 border-red-600 block;
+}
+
+mux-player::part(gesture-layer) {
+  display: none;
+}
+mux-player::part() {
+  display: block;
+}

@@ -30,12 +30,12 @@ export default function Home(muxRef) {
     setActive((active) => !active)
     console.log(active)
   }
-  
+
   const ref = useRef(null)
   useEffect(() => {
     // 👇️ use a ref (best)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     muxRef = ref.current
-   
   }, [])
   return (
     <div>
@@ -91,25 +91,47 @@ export default function Home(muxRef) {
           videoSrc="https://vimeo.com/771706414"
           shadowColor={'yellow'}
         />
-        <div onMouseOver={()=>{muxRef.play()}}
-       onMouseOut={()=>{muxRef.pause()}}>
-        <MuxPlayer
-          playbackId={'Ojz11wN2KWh7mz2Mgc2nvatL9KwYHP3M'}
-          // autoPlay={'muted'}
-          loop
-          muted
-          ref={ref}
-    
-       /></div>
-       <button onClick={()=>{muxRef.play()}}>PLAY VIDEO</button>
-       <button onClick={()=>{muxRef.pause()}}>PAUSE VIDEO</button>
-       <div className='w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer'
-       onMouseOver={()=>{muxRef.play()}}
-       onMouseOut={()=>{muxRef.pause()}}
-       ></div>
+        <div
+          onMouseOver={() => {
+            muxRef.play()
+          }}
+          onMouseOut={() => {
+            muxRef.pause()
+          }}
+        >
+          <MuxPlayer
+            playbackId={'Ojz11wN2KWh7mz2Mgc2nvatL9KwYHP3M'}
+            // autoPlay={'muted'}
+            loop
+            muted
+            ref={ref}
+          />
+        </div>
+        <button
+          onClick={() => {
+            muxRef.play()
+          }}
+        >
+          PLAY VIDEO
+        </button>
+        <button
+          onClick={() => {
+            muxRef.pause()
+          }}
+        >
+          PAUSE VIDEO
+        </button>
+        <div
+          className="w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer"
+          onMouseOver={() => {
+            muxRef.play()
+          }}
+          onMouseOut={() => {
+            muxRef.pause()
+          }}
+        ></div>
         <div>
           <video
-        
             key={'1'}
             loop
             preload={'auto'}
@@ -130,8 +152,6 @@ export default function Home(muxRef) {
           </video>
         </div>
       </div>
-     
     </div>
-    
   )
 }

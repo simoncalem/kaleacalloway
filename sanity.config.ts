@@ -5,7 +5,10 @@ import { visionTool } from '@sanity/vision'
 import { createConfig, Slug } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
+<<<<<<< HEAD
 import {muxInput} from 'sanity-plugin-mux-input'
+=======
+>>>>>>> 45538df318ce4b49faf019bb945fc6d4cc460a14
 
 import { PostsPreview } from './components/Posts/PostsPreview'
 import authorType from './schemas/author'
@@ -27,7 +30,10 @@ export default createConfig({
     types: [settingsType, postType, authorType],
   },
   plugins: [
+<<<<<<< HEAD
 
+=======
+>>>>>>> 45538df318ce4b49faf019bb945fc6d4cc460a14
     deskTool({
       structure: (S) => {
         // The `Settings` root list item
@@ -74,7 +80,10 @@ export default createConfig({
     visionTool({
       defaultApiVersion: '2022-08-08',
     }),
+<<<<<<< HEAD
 
+=======
+>>>>>>> 45538df318ce4b49faf019bb945fc6d4cc460a14
   ],
   document: {
     productionUrl: async (prev, { document }) => {
