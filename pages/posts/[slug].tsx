@@ -1,3 +1,4 @@
+import MuxPlayer from '@mux/mux-player-react'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -69,6 +70,7 @@ export default function Post(props: Props) {
                 author={post.author}
               />
               <PostBody content={post.content} />
+              <MuxPlayer playbackId={post.video.playbackId}/>
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

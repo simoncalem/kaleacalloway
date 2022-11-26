@@ -24,8 +24,8 @@ export default {
       to: {type: 'author'},
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'coverImage',
+      title: 'Cover image',
       type: 'image',
       options: {
         hotspot: true,
@@ -38,15 +38,18 @@ export default {
       of: [{type: 'reference', to: {type: 'category'}}],
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
+      name: 'date',
+      title: 'Date',
       type: 'datetime',
     },
     {
-      name: 'body',
-      title: 'Body',
+      name: 'content',
+      title: 'Content',
       type: 'blockContent',
     },
+    {name: 'video',
+  title: 'Video',
+type: 'mux.video',}
   ],
 
   preview: {
