@@ -32,8 +32,10 @@ export default function Home(muxRef) {
   }
   
   const ref = useRef(null)
+  muxRef = ref.current
   useEffect(() => {
     // 👇️ use a ref (best)
+  
     muxRef = ref.current
    
   }, [])
