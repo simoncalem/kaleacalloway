@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /studio/node_modules
+/studio2/node_modules
 /.pnp
 .pnp.js
 
@@ -16,6 +17,7 @@
 # production
 /build
 /studio/dist
+/studio2/dist
 
 # misc
 .DS_Store
@@ -39,3 +41,4 @@ yarn-error.log*
 # Env files created by scripts for working locally
 .env
 studio/.env.development
+studio2/.env.development
