@@ -4,6 +4,7 @@ export interface AuthorProps {
 }
 
 export interface PostProps {
+  video?: any
   title: string
   coverImage: any
   date: string

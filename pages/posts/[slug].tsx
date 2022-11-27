@@ -70,7 +70,13 @@ export default function Post(props: Props) {
                 author={post.author}
               />
               <PostBody content={post.content} />
-              <MuxPlayer playbackId={post.video.playbackId}/>
+
+         
+              <MuxPlayer playbackId={post.video?.playbackId}/>
+      
+
+              
+
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

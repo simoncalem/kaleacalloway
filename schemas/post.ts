@@ -77,6 +77,16 @@ export default defineType({
       type: 'datetime',
     },
     {
+      name: 'videoDescription',
+      title: 'Video Description',
+      type: 'text',
+    },
+    {
+      name: 'video',
+      title: 'Video',
+      type: 'mux.video',
+    },
+    {
       name: 'author',
       title: 'Author',
       type: 'reference',
