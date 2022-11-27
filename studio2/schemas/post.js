@@ -47,9 +47,11 @@ export default {
       title: 'Content',
       type: 'blockContent',
     },
-    {name: 'video',
-  title: 'Video',
-type: 'mux.video',}
+    {
+      name: 'video',
+      title: 'Video',
+      type: 'mux.video',
+    }
   ],
 
   preview: {
