@@ -34,12 +34,8 @@ export default function Home(muxRef) {
   const ref = useRef(null)
   muxRef = ref.current
   useEffect(() => {
-<<<<<<< HEAD
-    // 👇️ use a ref (best)
-  
-=======
+    
     // eslint-disable-next-line react-hooks/exhaustive-deps
->>>>>>> 45538df318ce4b49faf019bb945fc6d4cc460a14
     muxRef = ref.current
   }, [])
   return (
