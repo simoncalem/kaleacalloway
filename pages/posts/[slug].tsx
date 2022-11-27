@@ -95,6 +95,7 @@ export default function Post(props: Props) {
           loop
           muted
           ref={vidRef}
+          thumbnailTime={0.0}
         />
       </div>
 
