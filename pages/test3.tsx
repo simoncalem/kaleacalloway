@@ -1,9 +1,5 @@
 import MuxPlayer from '@mux/mux-player-react'
-import Vimeo from '@u-wave/react-vimeo'
-import dynamic from 'next/dynamic'
-import { useEffect, useRef, useState } from 'react'
-
-const VimeoVideo = dynamic(() => import('../components/vimeo-video'))
+import { useRef, useState } from 'react'
 
 const Message = ({ active }) => {
   return <h1>The video is {active ? 'disabled' : 'active'}</h1>
@@ -31,53 +27,40 @@ export default function Home(muxRef) {
     console.log(active)
   }
 
-  const ref = useRef(null)
-  muxRef = ref.current
-  useEffect(() => {
-    
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    muxRef = ref.current
-  }, [])
+  const vidRef = useRef(null)
+  const handlePlayVideo = () => {
+    vidRef.current.play();
+  }
+  const handlePauseVideo = () => {
+    vidRef.current.pause();
+  }
   return (
     <div className="center grid grid-cols-1 justify-items-center">
       <div
         className="border-2 border-blue-500 block"
         onMouseOver={() => {
-          muxRef.play()
+          handlePlayVideo()
         }}
         onMouseOut={() => {
-          muxRef.pause()
+          handlePauseVideo()
         }}
       >
         <MuxPlayer
-          playbackId={'jz015SdPKu1sNbYEVnWK7YUNVtEUVZ9iHsqKpI2oTmQk'}
+          playbackId={'Ojz11wN2KWh7mz2Mgc2nvatL9KwYHP3M'}
           loop
           muted
-          ref={ref}
+          ref={vidRef}
         />
       </div>
-      <button
-        onClick={() => {
-          muxRef.play()
-        }}
-      >
-        PLAY VIDEO
-      </button>
-      <button
-        onClick={() => {
-          muxRef.pause()
-        }}
-      >
-        PAUSE VIDEO
-      </button>
+      
 
       <div
         className="w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer"
         onMouseOver={() => {
-          muxRef.play()
+          handlePlayVideo()
         }}
         onMouseOut={() => {
-          muxRef.pause()
+          handlePauseVideo()
         }}
       ></div>
     </div>
