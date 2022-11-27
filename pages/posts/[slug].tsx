@@ -2,6 +2,7 @@ import MuxPlayer from '@mux/mux-player-react'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { useRef } from 'react'
 
 import Container from '../../components/container'
 import Header from '../../components/header'
@@ -40,6 +41,14 @@ export default function Post(props: Props) {
   }
   console.log(post)
 
+  const vidRef = useRef(null)
+  const handlePlayVideo = () => {
+    vidRef.current.play();
+  }
+  const handlePauseVideo = () => {
+    vidRef.current.pause();
+  }
+
   return (
     <Layout preview={preview}>
       <Container>
@@ -72,8 +81,22 @@ export default function Post(props: Props) {
               <PostBody content={post.content} />
 
          
-              <MuxPlayer playbackId={post.video?.playbackId}/>
-      
+              <div
+        className="border-2 border-blue-500 block"
+        onMouseOver={() => {
+          handlePlayVideo()
+        }}
+        onMouseOut={() => {
+          handlePauseVideo()
+        }}
+      >
+        <MuxPlayer
+          playbackId={post.video?.playbackId}
+          loop
+          muted
+          ref={vidRef}
+        />
+      </div>
 
               
 
