@@ -29,10 +29,10 @@ export default function Home(muxRef) {
 
   const vidRef = useRef(null)
   const handlePlayVideo = () => {
-    vidRef.current.play();
+    vidRef.current.play()
   }
   const handlePauseVideo = () => {
-    vidRef.current.pause();
+    vidRef.current.pause()
   }
   return (
     <div className="center grid grid-cols-1 justify-items-center">
@@ -52,7 +52,6 @@ export default function Home(muxRef) {
           ref={vidRef}
         />
       </div>
-      
 
       <div
         className="w-28 h-28 bg-blue-400 hover:bg-blue-700 hover:cursor-pointer"

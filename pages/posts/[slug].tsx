@@ -43,10 +43,10 @@ export default function Post(props: Props) {
 
   const vidRef = useRef(null)
   const handlePlayVideo = () => {
-    vidRef.current.play();
+    vidRef.current.play()
   }
   const handlePauseVideo = () => {
-    vidRef.current.pause();
+    vidRef.current.pause()
   }
 
   return (
@@ -80,27 +80,23 @@ export default function Post(props: Props) {
               />
               <PostBody content={post.content} />
 
-         
               <div
-        className="border-2 border-blue-500 block"
-        onMouseOver={() => {
-          handlePlayVideo()
-        }}
-        onMouseOut={() => {
-          handlePauseVideo()
-        }}
-      >
-        <MuxPlayer
-          playbackId={post.video?.playbackId}
-          loop
-          muted
-          ref={vidRef}
-          thumbnailTime={0.0}
-        />
-      </div>
-
-              
-
+                className="border-2 border-blue-500 flex"
+                onMouseOver={() => {
+                  handlePlayVideo()
+                }}
+                onMouseOut={() => {
+                  handlePauseVideo()
+                }}
+              >
+                <MuxPlayer
+                  playbackId={post.video?.playbackId}
+                  loop
+                  muted
+                  ref={vidRef}
+                  thumbnailTime={0.0}
+                />
+              </div>
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

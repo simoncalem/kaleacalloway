@@ -6,13 +6,9 @@
 
 mux-player {
   --controls: none;
-  display: block;
-  @apply border-2 border-red-600 block;
+  @apply border-2 border-yellow-500;
 }
 
 mux-player::part(gesture-layer) {
   display: none;
-}
-mux-player::part() {
-  display: block;
 }
