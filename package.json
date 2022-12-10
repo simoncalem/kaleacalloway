@@ -35,7 +35,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
-    "sanity": "dev-preview || 3.0.0-rc.2",
+    "sanity": "3.0.0-rc.2",
     "sanity-plugin-asset-source-unsplash": "3.0.0-v3-studio.10",
     "sanity-plugin-mux-input": "2.0.0-v3-studio.22",
     "styled-components": "^5.3.6"
