@@ -1,4 +1,6 @@
+import MuxPlayer from '@mux/mux-player-react'
 import Link from 'next/link'
+import { useRef } from 'react'
 
 import { PostProps } from '../types'
 import Avatar from './avatar'
@@ -6,11 +8,36 @@ import CoverImage from './cover-image'
 import Date from './date'
 
 export default function HeroPost(props: PostProps) {
-  const { title, coverImage, date, excerpt, author, slug } = props
+  const { title, coverImage, date, excerpt, author, slug, video } = props
+
+  const vidRef = useRef(null)
+  const handlePlayVideo = () => {
+    vidRef.current.play()
+  }
+  const handlePauseVideo = () => {
+    vidRef.current.pause()
+  }
   return (
     <section>
       <div className="mb-8 md:mb-16">
-        <CoverImage slug={slug} title={title} image={coverImage} priority />
+        <div
+          className="flex"
+          onMouseOver={() => {
+            handlePlayVideo()
+          }}
+          onMouseOut={() => {
+            handlePauseVideo()
+          }}
+        >
+          <MuxPlayer
+            playbackId={video?.playbackId}
+            loop
+            muted
+            ref={vidRef}
+            thumbnailTime={0.0}
+          />
+        </div>
+        {/* <CoverImage slug={slug} title={title} image={coverImage} priority /> */}
       </div>
       <div className="mb-20 md:mb-28 md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8">
         <div>

@@ -6,7 +6,6 @@
 
 mux-player {
   --controls: none;
-  @apply border-2 border-yellow-500;
 }
 
 mux-player::part(gesture-layer) {

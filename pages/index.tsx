@@ -11,6 +11,7 @@ import MoreStories from '../components/more-stories'
 import { indexQuery, settingsQuery } from '../lib/queries'
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient, overlayDrafts } from '../lib/sanity.server'
+import post from '../schemas/post'
 
 export default function Index({
   allPosts: initialAllPosts,
@@ -45,6 +46,7 @@ export default function Index({
               author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              video={heroPost.video}
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}

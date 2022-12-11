@@ -81,7 +81,7 @@ export default function Post(props: Props) {
               <PostBody content={post.content} />
 
               <div
-                className="border-2 border-blue-500 flex"
+                className=" flex"
                 onMouseOver={() => {
                   handlePlayVideo()
                 }}

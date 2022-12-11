@@ -1,4 +1,6 @@
+import MuxPlayer from '@mux/mux-player-react'
 import Link from 'next/link'
+import { useRef } from 'react'
 
 import { PostProps } from '../types'
 import Avatar from './avatar'
@@ -12,16 +14,35 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  video,
 }: PostProps) {
+  const vidRef = useRef(null)
+  const handlePlayVideo = () => {
+    vidRef.current.play()
+  }
+  const handlePauseVideo = () => {
+    vidRef.current.pause()
+  }
   return (
     <div>
       <div className="mb-5">
-        <CoverImage
-          slug={slug}
-          title={title}
-          image={coverImage}
-          priority={false}
-        />
+        <div
+          className="flex"
+          onMouseOver={() => {
+            handlePlayVideo()
+          }}
+          onMouseOut={() => {
+            handlePauseVideo()
+          }}
+        >
+          <MuxPlayer
+            playbackId={video?.playbackId}
+            loop
+            muted
+            ref={vidRef}
+            thumbnailTime={1.0}
+          />
+        </div>
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
         <Link href={`/posts/${slug}`} className="hover:underline">
