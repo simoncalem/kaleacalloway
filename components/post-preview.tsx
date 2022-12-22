@@ -40,7 +40,13 @@ export default function PostPreview({
             loop
             muted
             ref={vidRef}
-            thumbnailTime={1.0}
+            thumbnailTime={0.0}
+            style={{
+              height: '100%',
+              maxWidth: '100%',
+              border: '1px solid red',
+              lineHeight: '0px',
+            }}
           />
         </div>
       </div>

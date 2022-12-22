@@ -52,24 +52,6 @@ export default function Index({
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
         {/* <IntroTemplate /> */}
-        <div className="App" style={appStyles}>
-          <button
-            className="primary"
-            // style={styles}
-            onMouseEnter={() => setBgColour('#c83f49')}
-            onMouseLeave={() => setBgColour('#fafafa')}
-          >
-            {' '}
-            Red
-          </button>
-        </div>
-        <Vimeo
-          video="https://vimeo.com/735829448/25c2279ee1"
-          autoplay
-          background
-          loop
-          responsive
-        />
       </Layout>
     </>
   )
