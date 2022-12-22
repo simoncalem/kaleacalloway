@@ -11,3 +11,7 @@ mux-player {
 mux-player::part(gesture-layer) {
   display: none;
 }
+
+video {
+  @apply min-h-fit border-red-500 border-2;
+}

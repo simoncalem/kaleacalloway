@@ -35,6 +35,12 @@ export default function HeroPost(props: PostProps) {
             muted
             ref={vidRef}
             thumbnailTime={0.0}
+            style={{
+              height: '100%',
+              maxWidth: '100%',
+              border: '1px solid red',
+              lineHeight: '0px',
+            }}
           />
         </div>
         {/* <CoverImage slug={slug} title={title} image={coverImage} priority /> */}
