@@ -24,6 +24,13 @@ interface Props {
 }
 
 export default function Post(props: Props) {
+  const vidRef = useRef(null)
+  const handlePlayVideo = () => {
+    vidRef.current.play()
+  }
+  const handlePauseVideo = () => {
+    vidRef.current.pause()
+  }
   const { data: initialData, preview, blogSettings } = props
   const router = useRouter()
 
@@ -40,14 +47,6 @@ export default function Post(props: Props) {
     return <ErrorPage statusCode={404} />
   }
   console.log(post)
-
-  const vidRef = useRef(null)
-  const handlePlayVideo = () => {
-    vidRef.current.play()
-  }
-  const handlePauseVideo = () => {
-    vidRef.current.pause()
-  }
 
   return (
     <Layout preview={preview}>
@@ -81,7 +80,7 @@ export default function Post(props: Props) {
               <PostBody content={post.content} />
 
               <div
-                className=" flex"
+                className="flex"
                 onMouseOver={() => {
                   handlePlayVideo()
                 }}
@@ -90,12 +89,17 @@ export default function Post(props: Props) {
                 }}
               >
                 <MuxPlayer
-                  playbackId={post.video?.playbackId}
+                  playbackId={post?.video?.playbackId}
                   loop
                   muted
                   ref={vidRef}
-                  // thumbnailTime={5.0}
-                  startTime={5.0}
+                  thumbnailTime={0.0}
+                  style={{
+                    height: '100%',
+                    maxWidth: '100%',
+                    border: '1px solid red',
+                    lineHeight: '0px',
+                  }}
                 />
               </div>
             </article>
