@@ -84,7 +84,14 @@ export default defineType({
     {
       name: 'video',
       title: 'Video',
+      description: 'Short 2-5 second video for the hover preview',
       type: 'mux.video',
+    },
+    {
+      title: 'Vimeo URL',
+      name: 'vimeoUrl',
+      description: 'Full video link, Vimeo only',
+      type: 'url',
     },
     {
       name: 'author',

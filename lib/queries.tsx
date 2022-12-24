@@ -10,6 +10,7 @@ const postFields = groq`
   "slug": slug.current,
   "author": author->{name, picture},
   "video": video.asset->,
+  vimeoUrl,
 `
 
 export const settingsQuery = groq`*[_type == "settings"][0]{title}`

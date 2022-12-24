@@ -12,4 +12,5 @@ export interface PostProps {
   author: AuthorProps
   slug?: string
   content?: any
+  vimeoUrl?: string
 }

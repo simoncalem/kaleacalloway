@@ -12,6 +12,7 @@ import PostBody from '../../components/post-body'
 import PostHeader from '../../components/post-header'
 import PostTitle from '../../components/post-title'
 import SectionSeparator from '../../components/section-separator'
+import VimeoVideo from '../../components/vimeo-video'
 import { postQuery, postSlugsQuery, settingsQuery } from '../../lib/queries'
 import { urlForImage, usePreviewSubscription } from '../../lib/sanity'
 import { getClient, overlayDrafts } from '../../lib/sanity.server'
@@ -80,8 +81,10 @@ export default function Post(props: Props) {
                 />
               )}
               <PostBody content={post.content} />
-
-              <MuxVideo playbackId={post?.video?.playbackId} />
+              {post.vimeoUrl && (
+                <VimeoVideo videoSrc={post.vimeoUrl} shadowColor={'null'} />
+              )}
+              {/* <MuxVideo playbackId={post?.video?.playbackId} /> */}
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}
