@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 
 import BlogHeader from '../components/blog-header'
 import Container from '../components/container'
-import GridContainer from '../components/grid-container'
 import HeroPost from '../components/hero-post'
 import IntroTemplate from '../components/intro-template'
 import Layout from '../components/layout'
@@ -51,11 +50,6 @@ export default function Index({
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          <GridContainer>
-            {allPosts.map((post) => (
-              <li key={post._id}>{post.title}</li>
-            ))}
-          </GridContainer>
         </Container>
         {/* <IntroTemplate /> */}
       </Layout>

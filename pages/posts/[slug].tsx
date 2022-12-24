@@ -46,7 +46,7 @@ export default function Post(props: Props) {
   if (!router.isFallback && !slug) {
     return <ErrorPage statusCode={404} />
   }
-  console.log(post)
+  console.log('post demo', post, morePosts)
 
   return (
     <Layout preview={preview}>
@@ -71,12 +71,14 @@ export default function Post(props: Props) {
                   />
                 )}
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
+              {post.coverImage?.asset?._ref && (
+                <PostHeader
+                  title={post.title}
+                  coverImage={post.coverImage}
+                  date={post.date}
+                  author={post.author}
+                />
+              )}
               <PostBody content={post.content} />
 
               <div
