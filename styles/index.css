@@ -15,3 +15,9 @@ mux-player::part(gesture-layer) {
 video {
   @apply min-h-fit border-red-500 border-2;
 }
+
+html {
+  @apply bg-[#0b0c18] text-stone-200;
+}
+
+/* bg-[#1a3b34] */

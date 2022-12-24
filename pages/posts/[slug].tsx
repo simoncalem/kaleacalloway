@@ -1,4 +1,3 @@
-import MuxPlayer from '@mux/mux-player-react'
 import ErrorPage from 'next/error'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -8,6 +7,7 @@ import Container from '../../components/container'
 import Header from '../../components/header'
 import Layout from '../../components/layout'
 import MoreStories from '../../components/more-stories'
+import MuxVideo from '../../components/mux-video'
 import PostBody from '../../components/post-body'
 import PostHeader from '../../components/post-header'
 import PostTitle from '../../components/post-title'
@@ -81,29 +81,7 @@ export default function Post(props: Props) {
               )}
               <PostBody content={post.content} />
 
-              <div
-                className="flex"
-                onMouseOver={() => {
-                  handlePlayVideo()
-                }}
-                onMouseOut={() => {
-                  handlePauseVideo()
-                }}
-              >
-                <MuxPlayer
-                  playbackId={post?.video?.playbackId}
-                  loop
-                  muted
-                  ref={vidRef}
-                  thumbnailTime={0.0}
-                  style={{
-                    height: '100%',
-                    maxWidth: '100%',
-                    border: '1px solid red',
-                    lineHeight: '0px',
-                  }}
-                />
-              </div>
+              <MuxVideo playbackId={post?.video?.playbackId} />
             </article>
             <SectionSeparator />
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

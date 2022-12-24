@@ -9,6 +9,7 @@ import HeroPost from '../components/hero-post'
 import IntroTemplate from '../components/intro-template'
 import Layout from '../components/layout'
 import MoreStories from '../components/more-stories'
+import PostsGrid from '../components/posts-grid'
 import { indexQuery, settingsQuery } from '../lib/queries'
 import { usePreviewSubscription } from '../lib/sanity'
 import { getClient, overlayDrafts } from '../lib/sanity.server'
@@ -25,7 +26,7 @@ export default function Index({
   })
   const [heroPost, ...morePosts] = allPosts || []
   const { title = 'Blog.' } = blogSettings || {}
-  const [bgColour, setBgColour] = useState('#fafafa')
+  const [bgColour, setBgColour] = useState('#1a3b34')
 
   const appStyles = {
     height: '100vh',
@@ -39,23 +40,8 @@ export default function Index({
         </Head>
         <Container>
           <BlogHeader title={title} />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-              video={heroPost.video}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-          <GridContainer>
-            {allPosts.map((post) => (
-              <li key={post._id}>{post.title}</li>
-            ))}
-          </GridContainer>
+
+          <PostsGrid posts={allPosts} />
         </Container>
         {/* <IntroTemplate /> */}
       </Layout>

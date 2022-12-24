@@ -31,7 +31,7 @@ export default function MuxVideo(props) {
         style={{
           height: '100%',
           maxWidth: '100%',
-          border: '1px solid red',
+          // border: '1px solid red',
           lineHeight: '0px',
         }}
       />

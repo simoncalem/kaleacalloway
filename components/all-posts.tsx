@@ -7,7 +7,7 @@ import CoverImage from './cover-image'
 import Date from './date'
 import MuxVideo from './mux-video'
 
-export default function HeroPost(props: PostProps) {
+export default function AllPosts(props: PostProps) {
   const { title, coverImage, date, excerpt, author, slug, video } = props
 
   const vidRef = useRef(null)
