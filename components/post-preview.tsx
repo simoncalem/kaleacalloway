@@ -16,6 +16,8 @@ export default function PostPreview({
   author,
   slug,
   video,
+  // @ts-ignore
+  videoAspectRatio,
 }: PostProps) {
   const vidRef = useRef(null)
   const handlePlayVideo = () => {
@@ -27,7 +29,10 @@ export default function PostPreview({
   return (
     <div>
       <div className="mb-5">
-        <MuxVideo playbackId={video?.playbackId}></MuxVideo>
+        <MuxVideo
+          playbackId={video?.playbackId}
+          videoAspectRatio={videoAspectRatio}
+        ></MuxVideo>
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
         <Link
@@ -35,6 +40,7 @@ export default function PostPreview({
           className="hover:underline hover:decoration-1 hover:underline-offset-4"
         >
           {title}
+          {/* {videoAspectRatio} */}
         </Link>
       </h3>
       <div className="mb-4 text-lg">

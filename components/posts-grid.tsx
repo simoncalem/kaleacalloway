@@ -17,6 +17,8 @@ export default function PostsGrid({ posts }: { posts: PostProps[] }) {
             slug={post.slug}
             excerpt={post.excerpt}
             video={post.video}
+            // @ts-ignore
+            videoAspectRatio={post.video.data.aspect_ratio}
           />
         ))}
       </div>

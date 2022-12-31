@@ -2,7 +2,7 @@ import MuxPlayer from '@mux/mux-player-react'
 import { useEffect, useRef } from 'react'
 
 export default function MuxVideo(props) {
-  const { playbackId, thumbnailTime = 0.0 } = props
+  const { playbackId, thumbnailTime = 0.0, videoAspectRatio } = props
   const vidRef = useRef(null)
 
   useEffect(() => {
@@ -21,7 +21,6 @@ export default function MuxVideo(props) {
   }, [])
 
   return (
-    // <div className="flex cursor-pointer">
     <MuxPlayer
       playbackId={playbackId}
       loop
@@ -31,13 +30,11 @@ export default function MuxVideo(props) {
       style={{
         height: '100%',
         maxWidth: '100%',
-        // border: '1px solid red',
         lineHeight: '0px',
-        aspectRatio: '16/9',
+        aspectRatio: `${videoAspectRatio.replace(':', '/')}`,
         display: 'flex',
         cursor: 'pointer',
       }}
     />
-    // </div>
   )
 }
