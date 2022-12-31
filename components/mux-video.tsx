@@ -21,7 +21,7 @@ export default function MuxVideo(props) {
   }, [])
 
   return (
-    <div className="flex">
+    <div className="flex cursor-pointer">
       <MuxPlayer
         playbackId={playbackId}
         loop

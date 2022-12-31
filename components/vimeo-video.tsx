@@ -4,7 +4,7 @@ import { useState } from 'react'
 export default function VimeoVideo({ videoSrc, shadowColor }) {
   const [active, setActive] = useState(true)
 
-  const toggle = () => {
+  const isHovering = () => {
     setActive((active) => !active)
     console.log(active)
   }
@@ -16,13 +16,14 @@ export default function VimeoVideo({ videoSrc, shadowColor }) {
         </p>
       </div>
       <div
-        onMouseEnter={() => toggle()}
-        onMouseLeave={() => toggle()}
+        onMouseEnter={() => isHovering()}
+        onMouseLeave={() => isHovering()}
         className="absolute z-50 h-full w-full cursor-pointer saturate-50 backdrop-filter hover:saturate-100"
       ></div>
       <Vimeo
         video={videoSrc}
         paused={active}
+        responsive
         loop
         muted
         dnt={true}

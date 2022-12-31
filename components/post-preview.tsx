@@ -30,7 +30,10 @@ export default function PostPreview({
         <MuxVideo playbackId={video?.playbackId}></MuxVideo>
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
+        <Link
+          href={`/posts/${slug}`}
+          className="hover:underline hover:decoration-1 hover:underline-offset-4"
+        >
           {title}
         </Link>
       </h3>
