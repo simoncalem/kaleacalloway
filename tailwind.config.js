@@ -1,4 +1,8 @@
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
+
+// tailwind.config.js
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -29,6 +33,9 @@ module.exports = {
         '6xl': '2.75rem',
         '7xl': '4.5rem',
         '8xl': '6.25rem',
+      },
+      fontFamily: {
+        mono: ['var(--font-xanh)', ...fontFamily.mono],
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',

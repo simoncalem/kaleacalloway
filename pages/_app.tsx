@@ -1,13 +1,16 @@
 import '../styles/index.css'
 
-// pages/_app.js
 import { Xanh_Mono } from '@next/font/google'
 import { Analytics } from '@vercel/analytics/react'
-const xanh = Xanh_Mono({ weight: ['400'] })
+const xanh = Xanh_Mono({
+  weight: ['400'],
+  variable: '--font-xanh',
+  subsets: ['latin'],
+})
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <main className={xanh.className}>
+      <main className={`${xanh.variable} font-mono`}>
         <Component {...pageProps} />
         <Analytics />{' '}
       </main>

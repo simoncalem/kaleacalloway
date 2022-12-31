@@ -20,4 +20,10 @@ html {
   @apply bg-[#0b0c18] text-stone-200;
 }
 
+@layer base {
+  html {
+    font-family: Xanh_Mono, monospace;
+  }
+}
+
 /* bg-[#1a3b34] */
