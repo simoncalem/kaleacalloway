@@ -6,7 +6,7 @@ export default function VimeoVideo({ videoSrc, shadowColor }) {
 
   const isHovering = () => {
     setActive((active) => !active)
-    console.log(active)
+    // console.log(active)
   }
   return (
     <div className="relative group">
