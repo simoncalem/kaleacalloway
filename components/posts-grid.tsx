@@ -2,6 +2,7 @@ import { PostProps } from '../types'
 import PostPreview from './post-preview'
 
 export default function PostsGrid({ posts }: { posts: PostProps[] }) {
+  console.log('allposts', posts)
   return (
     <section>
       <h2 className="mb-8 text-6xl md:text-7xl"></h2>
