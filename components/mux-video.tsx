@@ -21,20 +21,23 @@ export default function MuxVideo(props) {
   }, [])
 
   return (
-    <div className="flex cursor-pointer">
-      <MuxPlayer
-        playbackId={playbackId}
-        loop
-        muted
-        ref={vidRef}
-        thumbnailTime={thumbnailTime}
-        style={{
-          height: '100%',
-          maxWidth: '100%',
-          // border: '1px solid red',
-          lineHeight: '0px',
-        }}
-      />
-    </div>
+    // <div className="flex cursor-pointer">
+    <MuxPlayer
+      playbackId={playbackId}
+      loop
+      muted
+      ref={vidRef}
+      thumbnailTime={thumbnailTime}
+      style={{
+        height: '100%',
+        maxWidth: '100%',
+        // border: '1px solid red',
+        lineHeight: '0px',
+        aspectRatio: '16/9',
+        display: 'flex',
+        cursor: 'pointer',
+      }}
+    />
+    // </div>
   )
 }
