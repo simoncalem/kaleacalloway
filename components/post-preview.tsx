@@ -27,14 +27,14 @@ export default function PostPreview({
     vidRef.current.pause()
   }
   return (
-    <div>
-      <div className="mb-5">
+    <div className="group">
+      <div className="mb-1 ">
         <MuxVideo
           playbackId={video?.playbackId}
           videoAspectRatio={videoAspectRatio}
         ></MuxVideo>
       </div>
-      <h3 className="mb-3 text-3xl leading-snug">
+      <h3 className="mb-1 text-xl leading-snug opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-150 ">
         <Link
           href={`/posts/${slug}`}
           className="hover:underline hover:decoration-1 hover:underline-offset-4"
@@ -43,11 +43,11 @@ export default function PostPreview({
           {/* {videoAspectRatio} */}
         </Link>
       </h3>
-      <div className="mb-4 text-lg">
+      {/* <div className="mb-4 text-lg">
         <Date dateString={date} />
-      </div>
-      <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
-      {author && <Avatar name={author.name} picture={author.picture} />}
+      </div> */}
+      {/* <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
+      {author && <Avatar name={author.name} picture={author.picture} />} */}
     </div>
   )
 }
