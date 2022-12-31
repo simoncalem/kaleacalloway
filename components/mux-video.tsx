@@ -23,8 +23,10 @@ export default function MuxVideo(props) {
   return (
     <MuxPlayer
       playbackId={playbackId}
+      streamType={'on-demand'}
       loop
       muted
+      preload="metadata"
       ref={vidRef}
       thumbnailTime={thumbnailTime}
       style={{

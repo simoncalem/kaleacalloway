@@ -11,6 +11,7 @@ specifiers:
   '@sanity/ui': ^0.37.22
   '@sanity/vision': 3.0.0-dev-preview.22
   '@sanity/webhook': ^2.0.0
+  '@types/node': '*'
   '@types/react': ^18.0.26
   '@u-wave/react-vimeo': ^0.9.10
   '@vercel/analytics': ^0.1.6
@@ -49,6 +50,7 @@ dependencies:
   '@sanity/ui': 0.37.22_2zpt4ilzykmne4yndyzrqd4gdm
   '@sanity/vision': 3.0.0-dev-preview.22_j2ea5dirjmreoooss4nd5hvmxq
   '@sanity/webhook': 2.0.0
+  '@types/node': 18.11.18
   '@u-wave/react-vimeo': 0.9.10_react@18.2.0
   '@vercel/analytics': 0.1.6_react@18.2.0
   add: 2.0.6
@@ -60,7 +62,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-is: 18.2.0
-  sanity: 3.0.0-rc.2_ph7a4h4zuhs3ikef4sgg5pirqm
+  sanity: 3.0.0-rc.2_wm6cv4qzooxlf2asepxq6u4y3i
   sanity-plugin-asset-source-unsplash: 3.0.0-v3-studio.10_qnun4orxfpw4gdo2nwbw6h4xmq
   sanity-plugin-mux-input: 2.0.0-v3-studio.22_qnun4orxfpw4gdo2nwbw6h4xmq
   styled-components: 5.3.6_7i5myeigehqah43i5u7wbekgba
@@ -1272,7 +1274,7 @@ packages:
       - supports-color
     dev: false
 
-  /@sanity/server/3.0.0-rc.2_biqbaboplfbrettd7655fr4n2y:
+  /@sanity/server/3.0.0-rc.2_l6igfz5ga4q4fmcl3ncwfbj5tu:
     resolution: {integrity: sha512-mD50vHzDSk4N/jxpTspQPGGmpYxJHANqSstorJnHGbRSOXGVS5/wSCJ26bU/1jXzZini73uRTQrNenN/577cpQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -1293,7 +1295,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
       read-pkg-up: 7.0.1
       resolve-from: 5.0.0
-      vite: 3.2.5
+      vite: 3.2.5_@types+node@18.11.18
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -1775,7 +1777,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6_@babel+core@7.20.7
       magic-string: 0.26.7
       react-refresh: 0.14.0
-      vite: 3.2.5
+      vite: 3.2.5_@types+node@18.11.18
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4785,7 +4787,7 @@ packages:
       groq: 2.33.2
       next: 13.1.1_7xlrwlvvs7cv2obrs6a5y6oxxq
       react: 18.2.0
-      sanity: 3.0.0-rc.2_ph7a4h4zuhs3ikef4sgg5pirqm
+      sanity: 3.0.0-rc.2_wm6cv4qzooxlf2asepxq6u4y3i
       styled-components: 5.3.6_7i5myeigehqah43i5u7wbekgba
     transitivePeerDependencies:
       - supports-color
@@ -5774,7 +5776,7 @@ packages:
       react-infinite-scroll-component: 6.1.0_react@18.2.0
       react-photo-album: 1.16.1_react@18.2.0
       rxjs: 7.8.0
-      sanity: 3.0.0-rc.2_ph7a4h4zuhs3ikef4sgg5pirqm
+      sanity: 3.0.0-rc.2_wm6cv4qzooxlf2asepxq6u4y3i
       styled-components: 5.3.6_7i5myeigehqah43i5u7wbekgba
     transitivePeerDependencies:
       - react-is
@@ -5802,7 +5804,7 @@ packages:
       react: 18.2.0
       react-is: 18.2.0
       rxjs: 6.6.7
-      sanity: 3.0.0-rc.2_ph7a4h4zuhs3ikef4sgg5pirqm
+      sanity: 3.0.0-rc.2_wm6cv4qzooxlf2asepxq6u4y3i
       scroll-into-view-if-needed: 2.2.31
       styled-components: 5.3.6_7i5myeigehqah43i5u7wbekgba
       suspend-react: 0.0.8_react@18.2.0
@@ -5813,7 +5815,7 @@ packages:
       - react-dom
     dev: false
 
-  /sanity/3.0.0-rc.2_ph7a4h4zuhs3ikef4sgg5pirqm:
+  /sanity/3.0.0-rc.2_wm6cv4qzooxlf2asepxq6u4y3i:
     resolution: {integrity: sha512-ZT4ZTsoFCGlpAFz6h4hYBRNwXCDKub3WxRa6B3nx87nS7DvwNB5w/b3FJfjwfGD2EZzgZJsfw1EEqySxuelS5A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -5844,7 +5846,7 @@ packages:
       '@sanity/mutator': 3.0.0-rc.2
       '@sanity/portable-text-editor': 3.0.0-rc.2_zd6skqab2rm35qma53bmg7gtte
       '@sanity/schema': 3.0.0-rc.2
-      '@sanity/server': 3.0.0-rc.2_biqbaboplfbrettd7655fr4n2y
+      '@sanity/server': 3.0.0-rc.2_l6igfz5ga4q4fmcl3ncwfbj5tu
       '@sanity/types': 3.0.0-rc.2
       '@sanity/ui': 1.0.0-beta.32_23mhwjhnzfjwvdn7ol54k26zom
       '@sanity/util': 3.0.0-rc.2
@@ -6661,7 +6663,7 @@ packages:
     resolution: {integrity: sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw==}
     dev: false
 
-  /vite/3.2.5:
+  /vite/3.2.5_@types+node@18.11.18:
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -6686,6 +6688,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.11.18
       esbuild: 0.15.18
       postcss: 8.4.20
       resolve: 1.22.1

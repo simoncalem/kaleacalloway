@@ -25,6 +25,7 @@
     "@sanity/ui": "^0.37.22",
     "@sanity/vision": "3.0.0-dev-preview.22",
     "@sanity/webhook": "^2.0.0",
+    "@types/node": "*",
     "@u-wave/react-vimeo": "^0.9.10",
     "@vercel/analytics": "^0.1.6",
     "add": "^2.0.6",
