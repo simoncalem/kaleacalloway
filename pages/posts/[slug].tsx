@@ -47,7 +47,7 @@ export default function Post(props: Props) {
   if (!router.isFallback && !slug) {
     return <ErrorPage statusCode={404} />
   }
-  // console.log('post demo', post, morePosts)
+  console.log('post demo', post, morePosts)
 
   return (
     <Layout preview={preview}>
