@@ -32,6 +32,7 @@ export default function Index({
     height: '100vh',
     background: `${bgColour}`,
   }
+
   return (
     <>
       <Layout preview={preview}>
