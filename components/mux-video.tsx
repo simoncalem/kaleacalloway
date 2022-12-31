@@ -2,7 +2,7 @@ import MuxPlayer from '@mux/mux-player-react'
 import { useEffect, useRef } from 'react'
 
 export default function MuxVideo(props) {
-  const { playbackId, thumbnailTime = 0.0, videoAspectRatio } = props
+  const { playbackId, thumbnailTime = 0.0, videoAspectRatio = '16/9' } = props
   const vidRef = useRef(null)
 
   useEffect(() => {
