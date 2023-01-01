@@ -36,6 +36,7 @@ module.exports = {
       },
       fontFamily: {
         mono: ['var(--font-xanh)', ...fontFamily.mono],
+        fragment: ['var(--font-fragment)', fontFamily.mono],
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',

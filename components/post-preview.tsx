@@ -34,10 +34,10 @@ export default function PostPreview({
           videoAspectRatio={videoAspectRatio}
         ></MuxVideo>
       </div>
-      <h3 className="mb-1 text-xl leading-snug opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-150 ">
+      <h3 className="mb-1 text-sm tracking-tighter leading-snug opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-150 after:hover:text-transparent after:hover:shadow-white  ">
         <Link
           href={`/posts/${slug}`}
-          className="hover:underline hover:decoration-1 hover:underline-offset-4"
+          className="hover:underline font-fragment hover:decoration-1 hover:underline-offset-4 hover:after:content-['🔗'] after:font-fragment"
         >
           {title}
           {/* {videoAspectRatio} */}

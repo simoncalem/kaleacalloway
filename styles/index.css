@@ -13,7 +13,7 @@ mux-player::part(gesture-layer) {
 }
 
 html {
-  @apply bg-[#0b0c18] text-stone-200;
+  @apply bg-[#080811] text-stone-200;
 }
 
 @layer base {
