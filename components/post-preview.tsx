@@ -28,16 +28,19 @@ export default function PostPreview({
   }
   return (
     <div className="group">
-      <div className="mb-1 ">
-        <MuxVideo
-          playbackId={video?.playbackId}
-          videoAspectRatio={videoAspectRatio}
-        ></MuxVideo>
+      <div className="mb-1 group-hover:shadow-[#ffffff2d] group-hover:shadow-2xl">
+        <div className="hidden md:block">
+          <MuxVideo
+            playbackId={video?.playbackId}
+            videoAspectRatio={videoAspectRatio}
+          ></MuxVideo>
+        </div>
+        <CoverImage title={title} image={coverImage} />
       </div>
       <h3 className="mb-1 text-sm tracking-tighter leading-snug opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-150 after:hover:text-transparent after:hover:shadow-white  ">
         <Link
           href={`/posts/${slug}`}
-          className="hover:underline font-fragment hover:decoration-1 hover:underline-offset-4 hover:after:content-['🔗'] after:font-fragment"
+          className="hover:underline font-fragment decoration-1 underline-offset-4 after:content-['🔗'] after:font-fragment"
         >
           {title}
           {/* {videoAspectRatio} */}
