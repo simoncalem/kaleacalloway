@@ -1,24 +1,34 @@
 import MuxPlayer from '@mux/mux-player-react'
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
+
+const videoStyles = {
+  height: '100%',
+  maxWidth: '100%',
+  lineHeight: '0px',
+  display: 'flex',
+  cursor: 'pointer',
+}
 
 export default function MuxVideo(props) {
   const { playbackId, thumbnailTime = 0.0, videoAspectRatio = '16/9' } = props
   const vidRef = useRef(null)
 
+  const handlePlayVideo = useCallback(() => {
+    vidRef.current.play()
+  }, [])
+
+  const handlePauseVideo = useCallback(() => {
+    vidRef.current.pause()
+  }, [])
+
   useEffect(() => {
-    const handlePlayVideo = () => {
-      vidRef.current.play()
-    }
-    const handlePauseVideo = () => {
-      vidRef.current.pause()
-    }
     vidRef.current.addEventListener('mouseover', handlePlayVideo)
     vidRef.current.addEventListener('mouseout', handlePauseVideo)
     return () => {
       vidRef.current.removeEventListener('mouseover', handlePlayVideo)
       vidRef.current.removeEventListener('mouseout', handlePauseVideo)
     }
-  }, [])
+  }, [handlePlayVideo, handlePauseVideo])
 
   return (
     <MuxPlayer
@@ -26,16 +36,13 @@ export default function MuxVideo(props) {
       streamType={'on-demand'}
       loop
       muted
-      preload="metadata"
+      preload={'auto'}
       ref={vidRef}
+      envKey={'potvukgqnmdjcurjum4jmij0l'}
       thumbnailTime={thumbnailTime}
       style={{
-        height: '100%',
-        maxWidth: '100%',
-        lineHeight: '0px',
+        ...videoStyles,
         aspectRatio: `${videoAspectRatio.replace(':', '/')}`,
-        display: 'flex',
-        cursor: 'pointer',
       }}
     />
   )
