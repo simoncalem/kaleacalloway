@@ -27,7 +27,7 @@ export default function PostPreview({
     vidRef.current.pause()
   }
   return (
-    <div className="group">
+    <div className="group md:first:col-span-2">
       <div className="mb-1 group-hover:shadow-[#ffffff2d] group-hover:shadow-2xl">
         <div className="hidden md:block">
           <MuxVideo
