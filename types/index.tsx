@@ -14,3 +14,10 @@ export interface PostProps {
   content?: any
   vimeoUrl?: string
 }
+export interface VideoPreviewProps {
+  title: string
+  coverImage: any
+  video?: any
+  author: AuthorProps
+  post: PostProps
+}

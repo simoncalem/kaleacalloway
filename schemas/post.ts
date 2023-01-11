@@ -1,7 +1,7 @@
 import { BookIcon } from '@sanity/icons'
 import { defineType } from 'sanity'
 
-import authorType from './author'
+import author from './author'
 
 /**
  * This file is the schema definition for a post.
@@ -97,7 +97,7 @@ export default defineType({
       name: 'author',
       title: 'Author',
       type: 'reference',
-      to: [{ type: authorType.name }],
+      to: [{ type: 'author' }],
     },
   ],
   preview: {

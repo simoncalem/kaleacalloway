@@ -11,6 +11,7 @@ import { PostsPreview } from './components/Posts/PostsPreview'
 import authorType from './schemas/author'
 import postType from './schemas/post'
 import settingsType from './schemas/settings'
+import videoPreviewType from './schemas/videoPreview'
 
 // @TODO: update next-sanity/studio to automatically set this when needed
 const basePath = '/studio'
@@ -24,7 +25,7 @@ export default createConfig({
     'Next.js Blog with Sanity.io',
   schema: {
     // If you want more content types, you can add them to this array
-    types: [settingsType, postType, authorType],
+    types: [settingsType, postType, authorType, videoPreviewType],
   },
   plugins: [
     deskTool({
